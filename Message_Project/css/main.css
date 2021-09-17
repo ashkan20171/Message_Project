@@ -1,0 +1,16 @@
+﻿body {
+    padding-top: 60px;
+    font-family:Tahoma;
+    font-size:13px;
+    
+}
+.unread
+{
+    color:red;
+    font-weight:bold;
+}
+#table_Inbox tr th,#table_Inbox tr td
+{
+    text-align:center;
+}
+

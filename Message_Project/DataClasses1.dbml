@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MsgDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BEHNAM;Initial Catalog=MsgDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MsgDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_message" Member="tbl_messages">
+    <Type Name="tbl_message">
+      <Column Name="msg_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="msg_sender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="msg_recipient" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="msg_subject" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="msg_content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="msg_read" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="msg_deleted" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="msg_status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Freinds" Member="tbl_Freinds">
+    <Type Name="tbl_Freind">
+      <Column Name="FreindId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentUser" Type="System.String" DbType="NVarChar(70) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Picture" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Online" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Admin" Member="tbl_Admins">
+    <Type Name="tbl_Admin">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="LastLogin" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Reply" Member="tbl_Replies">
+    <Type Name="tbl_Reply">
+      <Column Name="ReplyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Reciver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Request" Member="tbl_Requests">
+    <Type Name="tbl_Request">
+      <Column Name="Reqid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_users" Member="tbl_users">
+    <Type Name="tbl_user">
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastLogin" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Picture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ActiveCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ActiveMail" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TwoStepValidation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Logined" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PicLocal" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CountFailedLogin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_FriendRequest" Member="tbl_FriendRequests">
+    <Type Name="tbl_FriendRequest">
+      <Column Name="FriendId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentUser" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="Fusername" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="Fname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ffamily" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fmobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Femail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Fpicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoSendRequest" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Block" Member="tbl_Blocks">
+    <Type Name="tbl_Block">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserBlock" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsBlock" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Post" Member="tbl_Posts">
+    <Type Name="tbl_Post">
+      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Publisher" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Picture" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Like]" Member="Like" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DisLike" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
